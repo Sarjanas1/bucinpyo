@@ -21,7 +21,7 @@ app = pyrogram.Client(
 )
 
 @app.on_message(filters.regex("p") & filters.user(SUDO_USERS))
-def regex(_,message):
+def regex(_, message):
     app.send_message(message.chat.id,"ppp bang.")
     
 print('bisa rex')
