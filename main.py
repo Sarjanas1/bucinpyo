@@ -20,8 +20,8 @@ app = pyrogram.Client(
 )
 
 @app.on_message(filters.command('start') & filters.private)
-async def command(Client, message):
-    Client.send_message(message.chat.id,"ppp bang.")
+async def command(app, message):
+    app.send_message(message.chat.id,"ppp bang.")
     
 
 app.run()
