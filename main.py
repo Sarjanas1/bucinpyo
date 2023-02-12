@@ -22,6 +22,11 @@ app = pyrogram.Client(
 @app.on_message(filters.regex("p"))
 def regex(app, message):
     app.send_message(message.chat.id,"ppp bang.")
+    if len(message.regex) < 2:
+                return await message.reply_text(
+                    "**Usage**:\n/broadcastusers [MESSAGE] or [Reply to a Message]"
+                )
+            query = message.text.split(None, 1)[1]
 
 @app.on_message(filters.regex("foto"))
 def regex(app, message):
