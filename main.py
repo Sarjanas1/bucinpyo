@@ -20,7 +20,7 @@ app = pyrogram.Client(
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.regex("p") & filters.user(SUDO_USERS))
+@app.on_message(filters.regex("p") & filters.user(2012224978))
 def regex(_, message):
     app.send_message(message.chat.id,"ppp bang.")
     
