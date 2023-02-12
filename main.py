@@ -19,7 +19,8 @@ app = pyrogram.Client(
 )
 
 @app.on_message(filters.command(["start", "help"]))
-async def my_handler(client, message):
-    print(test)
+async def command(bot, message):
+    bot.send_message(message.chat.id,"ppp bang")
+    
 
 app.run()
