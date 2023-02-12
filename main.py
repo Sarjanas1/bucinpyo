@@ -12,6 +12,9 @@ import config
 
 from pyrogram import Client, filters
 
+loop = asyncio.get_event_loop()
+SUDO_USERS = config.SUDO_USER
+
 app = pyrogram.Client(
     "RexaBot",
     config.API_ID,
