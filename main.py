@@ -23,5 +23,5 @@ app = pyrogram.Client(
 def command(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     
-
+print('bisa rex')
 app.run()
