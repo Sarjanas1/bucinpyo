@@ -16,6 +16,7 @@ app = pyrogram.Client(
     config.API_ID,
     config.API_HASH,
     bot_token=config.BOT_TOKEN,
+)
 
 @app.on_message(filters.private)
 async def hello(client, message):
