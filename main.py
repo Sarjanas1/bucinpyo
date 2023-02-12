@@ -16,7 +16,7 @@ app = pyrogram.Client(
     "RexaBot",
     config.API_ID,
     config.API_HASH,
-    config.SUDO_USERS,
+    config.SUDO_USER,
     bot_token=config.BOT_TOKEN,
 )
 
