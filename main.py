@@ -22,7 +22,4 @@ app = pyrogram.Client(
 async def my_handler(client, message):
     print(test)
 
-print("[Rexa Ganteng] - Rexa Ganteng Started")
-    await idle()
-
 app.run()
