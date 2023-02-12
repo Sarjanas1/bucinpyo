@@ -12,9 +12,6 @@ import config
 
 from pyrogram import Client, filters
 
-
-SUDO_USERS = config.SUDO_USER
-
 app = pyrogram.Client(
     "RexaBot",
     config.API_ID,
