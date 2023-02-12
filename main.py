@@ -23,7 +23,7 @@ app = pyrogram.Client(
 def regex(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     if len(message.regex) < 2:
-                return await message.reply_text(
+                return message.reply_text(
                     "**Usage**:\n/broadcastusers [MESSAGE] or [Reply to a Message]"
                 )
 
