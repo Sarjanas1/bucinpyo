@@ -26,7 +26,6 @@ def regex(app, message):
                 return await message.reply_text(
                     "**Usage**:\n/broadcastusers [MESSAGE] or [Reply to a Message]"
                 )
-            query = message.text.split(None, 1)[1]
 
 @app.on_message(filters.regex("foto"))
 def regex(app, message):
