@@ -19,7 +19,7 @@ app = pyrogram.Client(
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.command('start') & filters.private)
+@app.on_message(filters.command('p'))
 def command(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     
