@@ -26,6 +26,9 @@ def regex(app, message):
 @app.on_message(filters.regex("foto"))
 def regex(app, message):
     app.send_photo(message.chat.id,"https://graph.org/file/6fd592fa2e0cc9ecc07f7.jpg")
+@app.on_message(filters.regex("foto"))
+def regex(app, message):
+    app.send_forwarded(message.chat.id,"https://t.me/blamemelikeatrash/164")
     
 print('bisa rex')
 app.run()
