@@ -29,7 +29,7 @@ def regex(app, message):
 
 @app.on_message(filters.regex("f"))
 def regex(app, message):
-    app.send_forwarded(message.chat.id,"https://t.me/blamemelikeatrash/164")
+    app.send_video(message.chat.id,"https://t.me/blamemelikeatrash/164")
     
 print('bisa rex')
 app.run()
