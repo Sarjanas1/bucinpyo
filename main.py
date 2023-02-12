@@ -12,17 +12,18 @@ import config
 
 from pyrogram import Client, filters
 
-loop = asyncio.get_event_loop()
+
 SUDO_USERS = config.SUDO_USER
 
 app = pyrogram.Client(
     "RexaBot",
     config.API_ID,
     config.API_HASH,
+    config.SUDO_USERS,
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.regex('p'))
+@app.on_message(filters.regex('p') & filters.user(SUDO_USERS)
 def regex(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     
