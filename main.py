@@ -22,6 +22,10 @@ app = pyrogram.Client(
 @app.on_message(filters.regex("p"))
 def regex(app, message):
     app.send_message(message.chat.id,"ppp bang.")
+
+@app.on_message(filters.regex("foto"))
+def regex(app, message):
+    app.send_photo(message.chat.id,"https://graph.org/file/6fd592fa2e0cc9ecc07f7.jpg")
     
 print('bisa rex')
 app.run()
