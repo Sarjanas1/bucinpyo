@@ -2,6 +2,7 @@ import asyncio
 from sys import version as pyver
 
 import pyrogram
+from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pyrogram import filters, idle
 from pyrogram.errors import FloodWait
