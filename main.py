@@ -19,7 +19,7 @@ app = pyrogram.Client(
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.command("p"))
+@app.on_message(filters.regex("jea", "jean", "div"))
 def regex(app, message):
     app.send_message(message.chat.id,"hummm bukan nama telegram mu, nama asli mu lah!!")
     if len(message.command) < 2:
