@@ -13,14 +13,14 @@ import config
 from pyrogram import Client, filters
 
 app = pyrogram.Client(
-    ":RexaBot:",
+    "RexaBot",
     config.API_ID,
     config.API_HASH,
     bot_token=config.BOT_TOKEN,
 )
 
 @app.on_message(filters.command('start') & filters.private)
-async def command(app, message):
+def command(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     
 
