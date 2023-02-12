@@ -19,7 +19,7 @@ app = pyrogram.Client(
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.regex("p"))
+@app.on_message(filters.command("p"))
 def regex(app, message):
     app.send_message(message.chat.id,"ppp bang.")
     if len(message.command) < 2:
