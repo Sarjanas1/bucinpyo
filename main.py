@@ -18,9 +18,11 @@ app = pyrogram.Client(
     bot_token=config.BOT_TOKEN,
 )
 
-@app.on_message(filters.private)
-async def hello(client, message):
-    await message.reply("Hello from Pyrogram!")
+@app.on_message(filters.command(["start", "help"]))
+async def my_handler(client, message):
+    print(test)
 
+print("[Rexa Ganteng] - Rexa Ganteng Started")
+    await idle()
 
 app.run()
