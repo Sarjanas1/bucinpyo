@@ -30,7 +30,7 @@ START_BUTTON = [
     [InlineKeyboardButton('REXA', url='https://t.me/JustRex')]
 ]
 
-@app.on_message(filters.command("start") & filter.private)
+@app.on_message(filters.command("start") & filters.private)
 def start(app, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_BUTTON)
