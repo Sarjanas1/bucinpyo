@@ -20,9 +20,22 @@ app = pyrogram.Client(
 )
 
 @app.on_message(filters.regex("jean"))
-@app.on_message(filters.regex("diva"))
+@app.on_message(filters.regex("jeann"))
 def regex(app, message):
     app.send_message(message.chat.id,"hummm bukan nama telegram mu, nama asli mu lah!!")
+
+@app.on_message(filters.regex("diva"))
+@app.on_message(filters.regex("div"))
+@app.on_message(filters.regex("diva"))
+@app.on_message(filters.regex("dipa"))
+def regex(app, message):
+    app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
+
+@app.on_message(filters.regex("indri"))
+@app.on_message(filters.regex("indriasari"))
+def regex(app, message):
+    app.send_message(message.chat.id,"nahhhh ini bener !! hehehehe ")
+
 
 @app.on_message(filters.regex("foto"))
 def regex(app, message):
