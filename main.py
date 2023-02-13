@@ -66,5 +66,11 @@ def regex(app, message):
 def regex(app, message):
     app.send_video(message.chat.id,"https://t.me/blamemelikeatrash/164")
     
+
+print('loading cuy')
+print('•')
+print('••')
+print('•••')
 print('bisa rex')
+print('gaskeun rex!!')
 app.run()
