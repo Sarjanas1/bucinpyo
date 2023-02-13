@@ -20,12 +20,9 @@ app = pyrogram.Client(
 )
 
 @app.on_message(filters.regex("jean"))
+@app.on_message(filters.regex("diva"))
 def regex(app, message):
     app.send_message(message.chat.id,"hummm bukan nama telegram mu, nama asli mu lah!!")
-    if len(message.command) < 2:
-                return message.reply_text(
-                    "😜"
-                )
 
 @app.on_message(filters.regex("foto"))
 def regex(app, message):
