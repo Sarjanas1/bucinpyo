@@ -11,9 +11,10 @@ from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pyrogram import filters, idle
 from pyrogram.errors import FloodWait
+
+# IMPORT PYRO TYPES
 from pyrogram.types import Message
-from pyrogram import Client, filters
-from pyrogram import InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 app = pyrogram.Client(
     "RexaBot",
