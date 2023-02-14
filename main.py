@@ -69,8 +69,8 @@ def chat_actions(app, message):
     time.sleep(1)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
-@app.on_message(filters.regex("indri"))
-@app.on_message(filters.regex("indriasari"))
+@app.on_message(filters.regex("ga"))
+@app.on_message(filters.regex("ga"))
 def regex(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
