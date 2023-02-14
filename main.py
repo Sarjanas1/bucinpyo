@@ -25,7 +25,9 @@ app = pyrogram.Client(
 
 # COMMAND START AND HELP
 
-START_MESSAGE = " HALO SAYA BOT CONFESS BUATAN REXA"
+START_MESSAGE = """ Halo saya Adalah bot yang dibuat untuk orang yang Rexa anggap Special
+Klik Mulai dibawah untuk memulai Saya
+"""
 START_BUTTON = [
     [InlineKeyboardButton('REXA', url='https://t.me/JustRex')]
 ]
