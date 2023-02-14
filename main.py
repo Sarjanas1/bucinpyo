@@ -142,6 +142,7 @@ Pencet Tombol Lanjut kalo seru
                 [InlineKeyboardButton ('LANJUT', callback_data="KEDUA")
             ]
         ]
+
         CallbackQuery.edit_message_text(
             KESATU,
             reply_markup = InlineKeyboardMarkup(KESATUTOMBOL)
