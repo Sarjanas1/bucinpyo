@@ -146,7 +146,7 @@ Pencet Tombol Lanjut kalo seru
         CallbackQuery.edit_message_text(
         KESATU,
         reply_markup = InlineKeyboardMarkup(KESATUTOMBOL)
-    )
+        )
 
 
 # REGEX SEND MEDIA
