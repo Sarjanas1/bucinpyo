@@ -61,7 +61,7 @@ async def chat_actions(_, message):
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     await time.sleep(1)
-    awiat app.send_message(message.chat.id, "benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
+    await app.send_message(message.chat.id, "benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("diva|div|dipa|diva"))
 async def actions_chat(_, message):
