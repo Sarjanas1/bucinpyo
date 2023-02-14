@@ -138,8 +138,8 @@ Pencet Tombol Lanjut kalo seru
  
         KESATUTOMBOL = [
             [
-                [InlineKeyboardButton ('KEMBALI KE MENU', callback_data="KEMBALI KE MENU"),
-                [InlineKeyboardButton ('LANJUT', callback_data="KEDUA")
+                [InlineKeyboardButton('KEMBALI KE MENU', callback_data="KEMBALI KE MENU"),
+                [InlineKeyboardButton('LANJUT', callback_data="KEDUA"),
             ]
         ]
 
