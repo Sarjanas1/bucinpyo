@@ -127,7 +127,7 @@ def akukepo(app, message):
 def callback_query(Client, CallbackQuery):
     if CallbackQuery.data == "KLIK DISINI":
 
-KESATU = """ Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
+        KESATU = """ Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
 Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
 Selain Karna orderan Bot :)
 
@@ -136,12 +136,13 @@ Pencet Tombol Lanjut kalo seru
 
 """  
  
-KESATUTOMBOL = [
-        [
-            [InlineKeyboardButton ('KEMBALI KE MENU', callback_data="KEMBALI KE MENU"),
-            [InlineKeyboardButton ('LANJUT', callback_data="KEDUA")
+        KESATUTOMBOL = [
+            [
+                [InlineKeyboardButton ('KEMBALI KE MENU', callback_data="KEMBALI KE MENU"),
+                [InlineKeyboardButton ('LANJUT', callback_data="KEDUA")
+            ]
         ]
-    ]
+
         CallbackQuery.edit_message_text(
         KESATU,
         reply_markup = InlineKeyboardMarkup(KESATUTOMBOL)
