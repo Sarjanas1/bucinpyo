@@ -128,17 +128,16 @@ def callback_query(Client, CallbackQuery):
     if CallbackQuery.data == "KLIK DISINI":
     
     KESATU = """ Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
-Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
-Selain Karna orderan Bot :)
+    Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
+    Selain Karna orderan Bot :)
 
-Maaf juga gua gabisa ngasih apa apa cuma Bot simple yang bikinnya juga ga terlalu effort cuma sekitar 5 hari aja sih
-Karena Jujur aku pertama kali bikin bot dari 0% tanpa bantuan siapapun Kalo bot lain itu
-biasanya aku benerin yang rusak gabikin dari 0 Kek gini heheh 
-Tantangan sih bikin bot kek gini Tapi im happy bcs u !!
+    Maaf juga gua gabisa ngasih apa apa cuma Bot simple yang bikinnya juga ga terlalu effort cuma sekitar 5 hari aja sih
+    Karena Jujur aku pertama kali bikin bot dari 0% tanpa bantuan siapapun Kalo bot lain itu
+    biasanya aku benerin yang rusak gabikin dari 0 Kek gini heheh 
+    Tantangan sih bikin bot kek gini Tapi im happy bcs u !!
 
-Intinya Terimakasih Banyak Untuk kamu
-
-Pencet Tombol Lanjut kalo seru
+    Intinya Terimakasih Banyak Untuk kamu
+    Pencet Tombol Lanjut kalo seru
 
 """   
     KESATUTOMBOL = [
