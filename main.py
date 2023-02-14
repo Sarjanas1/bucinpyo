@@ -46,7 +46,7 @@ def start(app, message):
 # MULAI 
 @app.on_message(filters.regex("mulai"))
 def chat_action(app, message):
-    app.send_chat_action(message.chat.id,enums.chat.ChatActions.TYPING)
+    app.send_chat_action(message.chat.id, enums.chat.ChatActions.TYPING)
     time.sleep(5)
     app.send_message(message.chat.id,"Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Rexa tuju")
 
