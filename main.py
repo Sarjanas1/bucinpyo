@@ -73,7 +73,7 @@ def chat_actions(app, message):
 # ESEKUSI 1
 
 @app.on_message(filters.regex("indri"))
-@app.on_messafe(filters.regex("indriasari))
+@app.on_messafe(filters.regex("indriasari"))
 def regex(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
