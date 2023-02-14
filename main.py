@@ -78,7 +78,7 @@ def regex(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
     app.send_message(message.chat.id,""" Nah ini nama yang bener hehehe !!!
-                                        Halo indri 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
+Halo indri 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
 Gimana ? kaget ga, ternyata kamu orangnya!!! keknya sih engga muhehe
 
 Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik penasaran :)
@@ -94,6 +94,35 @@ Oke jadi di bot ini Gua (Rexa) Cuma mau sampein sedikit banyak eh gmna ya -,-, I
 
 coba Kamu ketik intinya
 """)
+
+@app.on_message(filters.regex("intinya"))
+@app.on_message(filters.regex("inti"))
+def regex(app, message):
+    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(2)
+    app.send_message(message.chat.id,""" Gua cuma mau Berterima Kasih Karena udah kenal sama aku
+dan jadi temen baik, sering cerita dll intinya terimakasih banyakk yakk!!!
+sebenernya ada lagi tapi aku gamau ngeliat kamu cape typing jadi kita main tombol aja yak !!
+
+Sekarang kamu pencet -> /akukepo
+""")
+
+
+# CALLBACK TOMBOL YA INI !!
+
+AKUKEPO = Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)
+
+AKUKEPOTOMBOL = [
+    [InlineKeyboardButton ('Klik Disini', callback_data="kesatu")]
+]
+
+@app.on_message(filters.command("akukepo") & filters.private)
+def akukepo(app, message):
+    message.reply(
+        text = AKUKEPO,
+        reply_markup = InlineKeyboardMarkup(AKUKEPOTOMBOL)
+    )
+
 
 
 # REGEX SEND MEDIA
