@@ -49,14 +49,15 @@ def start(app, message):
 @app.on_message(filters.regex("mulai"))
 def chat_actions(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    time.sleep(5)
+    time.sleep(3)
     app.send_message(message.chat.id,"Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Rexa tuju")
 
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean"))
 @app.on_message(filters.regex("jeann"))
 def regex(app, message):
-    app.send_chat_action(message.chat.id,enums.chat.ChatActions.TYPING)
+    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(2)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("diva"))
@@ -64,11 +65,15 @@ def regex(app, message):
 @app.on_message(filters.regex("diva"))
 @app.on_message(filters.regex("dipa"))
 def regex(app, message):
+    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(2)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("indri"))
 @app.on_message(filters.regex("indriasari"))
 def regex(app, message):
+    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(2)
     app.send_message(message.chat.id,"nahhhh ini bener !! hehehehe ")
 
 # REGEX SEND MEDIA
