@@ -29,7 +29,7 @@ START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang R
 Klik Mulai dibawah untuk memulai Saya
 """
 START_BUTTON = [
-    [InlineKeyboardButton('Mulai', '/mulai')]
+    [InlineKeyboardButton('Mulai', callback_data="MULAI")]
     [InlineKeyboardButton ('Rexa', url='https://t.me/JustRex')]
 ]
 
@@ -49,7 +49,7 @@ MULAI = """ Sekarang coba ketik nama Kamu untuk memastikan apakah kamu orang yan
 
 @app.on_message(filters.command("mulai") & filters.private)
 def start(app, message):
-    text = START_MESSAGE
+    text = MULAI
 
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean"))
