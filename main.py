@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pyrogram import filters, idle
 from pyrogram.errors import FloodWait
-from pyrogram import enum
+from pyrogram.enums import ChatAction
 
 # IMPORT PYRO TYPES
 from pyrogram.types import Message
