@@ -53,20 +53,20 @@ async def start(_, message):
 @app.on_message(filters.regex("mulai"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(2)
+    time.sleep(2)
     await app.send_message(message.chat.id, "Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Rexa tuju")
 
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean|jeann"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(1)
+    time.sleep(1)
     await app.send_message(message.chat.id, "benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("diva|div|dipa|diva"))
 async def actions_chat(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(1)
+    time.sleep(1)
     await app.send_message(message.chat.id, "benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 
@@ -75,7 +75,7 @@ async def actions_chat(_, message):
 @app.on_message(filters.regex("indriasari|indri"))
 async def regex_indri(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(2)
+    time.sleep(2)
     TEXT = """
 Nah ini nama yang bener hehehe !!!
 Halo indri 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
@@ -88,7 +88,7 @@ Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik pena
 @app.on_message(filters.regex("pnasaran|penasaran"))
 async def regexpena(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(2)
+    time.sleep(2)
     TEXT = """
 Idih Kepo?? muhehehe becanda ya!!!
 Oke jadi di bot ini Gua (Rexa) Cuma mau sampein sedikit banyak eh gmna ya -,-, Intinya gini
@@ -100,7 +100,7 @@ coba Kamu ketik intinya
 @app.on_message(filters.regex("inti|intinya"))
 async def regexinti(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    await time.sleep(2)
+    time.sleep(2)
     TEXT = """
 Gua cuma mau Berterima Kasih Karena udah kenal sama aku
 dan jadi temen baik, sering cerita dll intinya terimakasih banyakk yakk!!!
