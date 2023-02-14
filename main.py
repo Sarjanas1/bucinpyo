@@ -25,11 +25,12 @@ app = pyrogram.Client(
 
 # COMMAND START AND HELP
 
-START_MESSAGE = """ Halo saya Adalah bot yang dibuat untuk orang yang Rexa anggap Special
+START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Rexa anggap Special
 Klik Mulai dibawah untuk memulai Saya
 """
 START_BUTTON = [
-    [InlineKeyboardButton('REXA', url='https://t.me/JustRex')]
+    [InlineKeyboardButton('Mulai', /mulai')]
+    [InlineKeyboardButton ('Rexa', url='https://t.me/JustRex')]
 ]
 
 @app.on_message(filters.command("start") & filters.private)
@@ -41,6 +42,15 @@ def start(app, message):
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
+
+# MULAI 
+
+MULAI = """ Sekarang coba ketik nama Kamu untuk memastikan apakah kamu orang yang tepat... """
+
+@app.on_message(filters.command("mulai") & filters.private)
+def start(app, message):
+    text = START_MESSAGE
+
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean"))
 @app.on_message(filters.regex("jeann"))
