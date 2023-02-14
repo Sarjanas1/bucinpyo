@@ -44,18 +44,19 @@ def start(app, message):
         disable_web_page_preview=True
     )
 # MULAI 
-
-MULAI = """ Sekarang coba ketik nama Kamu untuk memastikan apakah kamu orang yang tepat... """
-
-@app.on_message(filters.command("mulai") & filters.private)
-def mulai(app, message):
-    text = MULAI
+@app.on_message(filters.regex("mulai"))
+def chat_action(app, message):
+    app.send_chat_action(message.chat.id,enums.chat.ChatActions.TYPING)
+    time.sleep(5)
+    app.send_message(message.chat.id,"Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Rexa tuju")
 
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean"))
 @app.on_message(filters.regex("jeann"))
 def regex(app, message):
-    app.send_message(message.chat.id,"hummm bukan nama telegram mu, nama asli mu lah!!")
+    app.send_chat_action(message.chat.id,enums.chat.ChatActions.TYPING)
+    time.sleep(5)
+    app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("diva"))
 @app.on_message(filters.regex("div"))
