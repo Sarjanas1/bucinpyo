@@ -33,7 +33,7 @@ Ketik mulai untuk memulai Bot ini :)
 👨‍💻 Owner :
 """
 START_BUTTON = [
-    [InlineKeyboardButton ('Rexa', url='https://t.me/JustRex')]
+    [InlineKeyboardButton('Rexa', url='https://t.me/JustRex')]
 ]
 
 @app.on_message(filters.command("start") & filters.private)
