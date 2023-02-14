@@ -14,7 +14,7 @@ from pyrogram.errors import FloodWait
 
 # IMPORT PYRO TYPES
 from pyrogram.types import Message
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery 
 
 app = pyrogram.Client(
     "RexaBot",
@@ -26,10 +26,11 @@ app = pyrogram.Client(
 # COMMAND START AND HELP
 
 START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Rexa anggap Special
-Klik Mulai dibawah untuk memulai Saya
+Ketik mulai untuk memulai Bot ini :)
+
+👨‍💻 Owner :
 """
 START_BUTTON = [
-    [InlineKeyboardButton('Mulai', text=/mulai)]
     [InlineKeyboardButton ('Rexa', url='https://t.me/JustRex')]
 ]
 
@@ -42,13 +43,12 @@ def start(app, message):
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
-
 # MULAI 
 
 MULAI = """ Sekarang coba ketik nama Kamu untuk memastikan apakah kamu orang yang tepat... """
 
 @app.on_message(filters.command("mulai") & filters.private)
-def start(app, message):
+def mulai(app, message):
     text = MULAI
 
 # REGEX CARI NAMA
