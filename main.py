@@ -69,23 +69,32 @@ def chat_actions(app, message):
     time.sleep(1)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
-@app.on_message(filters.regex("ga"))
-@app.on_message(filters.regex("ga"))
-def regex(app, message):
-    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    time.sleep(1)
-    app.send_message(message.chat.id,"nahhhh ini bener !! hehehehe ")
 
-# MULAI 2
+# ESEKUSI 1
 
 @app.on_message(filters.regex("indri"))
+@app.on_messafe(filters.regex("indriasari))
 def regex(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
-    app.send_message(message.chat.id,"""
+    app.send_message(message.chat.id,""" Nah ini nama yang bener hehehe !!!
                                         Halo indri 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
-                                        Gimana ? kaget ga, ternyata kamu orangnya!!! keknya sih engga muhehe
+Gimana ? kaget ga, ternyata kamu orangnya!!! keknya sih engga muhehe
+
+Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik penasaran :)
 """)
+
+@app.on_message(filters.regex("penasaran"))
+@app.on_messafe(filters.regex("pnasaran"))
+def regex(app, message):
+    app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(2)
+    app.send_message(message.chat.id,""" Idih Kepo?? muhehehe becanda ya!!!
+Oke jadi di bot ini Gua (Rexa) Cuma mau sampein sedikit banyak eh gmna ya -,-, Intinya gini
+
+coba Kamu ketik intinya
+""")
+
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
