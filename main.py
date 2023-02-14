@@ -56,7 +56,6 @@ def chat_actions(app, message):
 @app.on_message(filters.regex("jeann"))
 def regex(app, message):
     app.send_chat_action(message.chat.id,enums.chat.ChatActions.TYPING)
-    time.sleep(5)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
 @app.on_message(filters.regex("diva"))
