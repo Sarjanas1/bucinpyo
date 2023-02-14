@@ -113,7 +113,7 @@ Sekarang kamu pencet -> /akukepo
 AKUKEPO = "Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)"
 
 AKUKEPOTOMBOL = [
-    [InlineKeyboardButton ('KLIK DISINI', callback_data="KESATU")]
+    [InlineKeyboardButton('KLIK DISINI', callback_data="KESATU")]
 ]
 
 @app.on_message(filters.command("akukepo") & filters.private)
