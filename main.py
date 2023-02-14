@@ -51,7 +51,7 @@ async def start(_, message):
 
 # MULAI 
 @app.on_message(filters.regex("mulai"))
-await def chat_actions(_, message):
+async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     await time.sleep(2)
     await app.send_message(message.chat.id, "Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Rexa tuju")
