@@ -29,7 +29,7 @@ START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang R
 Klik Mulai dibawah untuk memulai Saya
 """
 START_BUTTON = [
-    [InlineKeyboardButton('Mulai', callback_data="MULAI")]
+    [InlineKeyboardButton('Mulai', text=/mulai)]
     [InlineKeyboardButton ('Rexa', url='https://t.me/JustRex')]
 ]
 
