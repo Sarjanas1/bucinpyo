@@ -126,17 +126,16 @@ def akukepo(app, message):
 @app.on_callback_query()
 def callback_query(Client, CallbackQuery):
     if CallbackQuery.data == "KLIK DISINI":
-    
-KESATU = """
 
-Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
+KESATU = """ Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
 Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
 Selain Karna orderan Bot :)
 
 Intinya Terimakasih Banyak Untuk kamu
 Pencet Tombol Lanjut kalo seru
 
-"""   
+"""  
+ 
 KESATUTOMBOL = [
         [
             [InlineKeyboardButton ('KEMBALI KE MENU', callback_data="KEMBALI KE MENU"),
