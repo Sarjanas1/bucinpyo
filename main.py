@@ -110,7 +110,7 @@ Sekarang kamu pencet -> /akukepo
 
 # CALLBACK TOMBOL YA INI !!
 
-AKUKEPO = Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)
+AKUKEPO = "Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)"
 
 AKUKEPOTOMBOL = [
     [InlineKeyboardButton ('Klik Disini', callback_data="kesatu")]
