@@ -85,7 +85,7 @@ Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik pena
 """)
 
 @app.on_message(filters.regex("penasaran"))
-@app.on_messafe(filters.regex("pnasaran"))
+@app.on_message(filters.regex("pnasaran"))
 def regex(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
