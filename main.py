@@ -55,7 +55,7 @@ def chat_actions(app, message):
 # REGEX CARI NAMA
 @app.on_message(filters.regex("jean"))
 @app.on_message(filters.regex("jeann"))
-def regex(app, message):
+def chat_actions(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
@@ -64,7 +64,7 @@ def regex(app, message):
 @app.on_message(filters.regex("div"))
 @app.on_message(filters.regex("diva"))
 @app.on_message(filters.regex("dipa"))
-def regex(app, message):
+def chat_actions(app, message):
     app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
     app.send_message(message.chat.id,"benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
