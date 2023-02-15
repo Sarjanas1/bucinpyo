@@ -129,8 +129,7 @@ async def akukepo(_, message):
         reply_markup = InlineKeyboardMarkup(AKUKEPOTOMBOL)
     )
 
-@app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh"))
-async@app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh|kedelapan|kesembilan"))
+@app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh|kedelapan|kesembilan|selesai"))
 async def kesatu(_, callback_query):
     query = callback_query.data.split()
     if query[0] == "kesatu":
