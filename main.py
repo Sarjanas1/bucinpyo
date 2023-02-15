@@ -30,6 +30,8 @@ app = pyrogram.Client(
 START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Rexa anggap Special
 Ketik mulai untuk memulai Bot ini :)
 
+⚠️ Aturan pakai, jangan mengetik jika tidak disuruh mengetik!!
+
 👨‍💻 Owner :
 """
 
@@ -364,7 +366,7 @@ setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh,
 
 ini pokoknya harus :
 
-😡 ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik ** udah **
+😡 kirim ke bot @rexaasisstantrobot kalo sudah ketik ** udah **
 """)
 
 # UDAH 
