@@ -143,7 +143,7 @@ Pencet Tombol Lanjut kalo seru
 """  
         KESATUTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KE MENU", callback_data="kembali_ke_menu"),
+                InlineKeyboardButton("KEMBALI KE MENU", callback_data="akukepo"),
                 InlineKeyboardButton("LANJUT", callback_data="kedua"),
             ],
         ]
