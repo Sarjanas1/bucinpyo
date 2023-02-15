@@ -306,7 +306,7 @@ Teeimakasih yaaaaa udah jawab, tenang aja pesan ini ga diliat rexa kok, jadi kam
 Btw aku mau nanya are u sad or happy?
 bales ya !!""")
 
-@app.on_message(filters.regex("ya|iya|suka|y|yak|iyak"))
+@app.on_message(filters.regex("iya|suka"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
@@ -315,11 +315,6 @@ Serius banget nih kamu suka aku? wtf semalem gua mimpi apa ya anjg wkwkwk
 Terimakasih banget ya udah suka saya wkwkw, sebenernya aku gatau jawaban kamu sih ini kan bot wkwkwk tapi gapapa aku seneng aja hehe!
 oh iya aku mau nanya are u sad or happy?
 Bales ya!""")
-
-@app.on_message(filters.regex("ya|iya|suka|y|yak|iyak"))
-async def regex_foto(_, message):
-    await app.send_sticker(message.chat.id, "CAACAgUAAx0EZ77D7QAC4wpj7OcOfwWCQX2j_kH0Wk0oqgmKpgACJQUAAn3dOVa0npVTk7sv9R4E")
-
 
 # SAD & happy
 
@@ -367,7 +362,9 @@ may you always be happy 😊
 
 setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh, 
 
-ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik ** udah **
+ini pokoknya harus :
+
+😡 ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik ** udah **
 """)
 
 # UDAH 
@@ -377,7 +374,7 @@ async def chat_actions(_, message):
     time.sleep(1)
     await app.send_message(message.chat.id, """
 makasih yak udah ngirim respon ke aku hehe terimakasih banget yaaaaa!!! btw aku mau kasih bonus ke ke kamu
-sekarang cobain ketik kata dibawha ini ya :
+sekarang cobain ketik kata dibawah ini ya :
 
 👉🏻 jamet
 👉🏻 cantik
@@ -441,7 +438,7 @@ async def regex_lirik(_, message):
 
 @app.on_message(filters.regex("imut"))
 async def regex_imut(_, message):
-    await app.send_video(message.chat.id, "https://t.me/ifusadcallme/5", caption="WKWKWKWKWK")
+    await app.send_photo(message.chat.id, "https://t.me/ifusadcallme/5", caption="WKWKWKWKWK")
 
 @app.on_message(filters.regex("specialvideo"))
 async def regex_cantik(_, message):
