@@ -349,7 +349,7 @@ PHOTO = "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg"
 @app.on_message(filters.regex("sesuatu") & filters.private)
 async def lcas(_, message):
     text = LUCAS
-    photo= PHOTO
+    photo = PHOTO
     await message.reply(
         text=text,
         photo=photo,
