@@ -111,7 +111,23 @@ Sekarang kamu pencet -> /akukepo
     await app.send_message(message.chat.id, text=TEXT)
 
 
-# CALLBACK TOMBOL YA INI !!
+# CALLBACK TOMBOL YA INI !
+
+AKUKEPO = "Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)"
+
+AKUKEPOTOMBOL = [
+
+    [  
+        InlineKeyboardButton("KLIK DISINI", callback_data="kesatu"),              
+    ],            
+]            
+
+@app.on_message(filters.command("akukepo") & filters.private)
+async def akukepo(_, message):
+    await message.reply(
+        text = AKUKEPO,
+        reply_markup = InlineKeyboardMarkup(AKUKEPOTOMBOL)
+    )
 
 @app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh"))
 async def kesatu(_, callback_query):
