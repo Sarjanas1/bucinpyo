@@ -257,7 +257,6 @@ TES 9
                 ]
             ]
         await callback_query.message.delete(KESEMBILAN)
-        )
 
 @app.on_callback_query(filters.regex("^selesai"))
 async def closekontol(_, callback_query):        
