@@ -340,21 +340,14 @@ oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya 
 
 # SEND LUCAS
 
-LUCAS = """ Ni ku kasih foto jamet hehehe wleee 😜
-Kalo kurang ketik aja lucasbau
-"""
-
-PHOTO = "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg"
-
-@app.on_message(filters.regex("sesuatu") & filters.private)
-async def lcas(_, message):
-    text = LUCAS
-    photo = PHOTO
-    await message.reply_photo(
-        text=text,
-        photo=photo
-    )
-
+@app.on_message(filters.regex("sesuatu"))
+async def foto_se(_, message):
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg")
+    if len(message.command) < 2:
+        return await message.reply_text(
+            "Kalo mau lagi coba ketik lucasbau"
+        )
+    query = message.text.split(None, 1)[1]
 @app.on_message(filters.regex("lucasbau"))
 async def regex_foto(_, message):
     await app.send_photo(message.chat.id, "https://graph.org/file/46b2aa7693a28e510f5e0.jpg")
