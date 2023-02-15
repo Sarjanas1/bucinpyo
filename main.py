@@ -179,7 +179,7 @@ TES 3
             KETIGA, reply_markup=InlineKeyboardMarkup(KETIGATOMBOL)
         )
 
-    if query[0] =="keempat"
+    if query[0] =="keempat":
         KEEMPAT = """
 TES 4
 """
