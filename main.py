@@ -355,12 +355,15 @@ Apalagi ada tujuannya, ya siapa lagi kalo bukan kamu
 Makasih banget loh berkat kamu aku jadi banyak bgt bikin bot game, yang tadinya ketakutan keluar dari zona nyaman bot ku
 sserius dulu aku ga berani ke bot lain selain hikari, dan berkat kamu aku berhasil
 
-Aku harap kamu bisa kek aku, bukan jago bot tapi berhasil keluar dari Zona nyaman kamu yaaa
-everything will be fine, get rid of the fear in u, I'm here to show u something you've never seen before ♥️
+Aku harap kamu bisa kek aku, bukan bisa main bot tapi berhasil keluar dari Zona nyaman kamu yaaa
+
+✏️ Everything will be fine, get rid of the fear in u, I'm here to show u something you've never seen before ♥️
 ILove you and Thankyou So much hehehe ♥️
 may you always be happy 😊
 
-setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh, ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik udah
+setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh, 
+
+ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik ** udah **
 """)
 
 # UDAH 
@@ -370,13 +373,14 @@ async def chat_actions(_, message):
     time.sleep(1)
     await app.send_message(message.chat.id, """
 makasih yak udah ngirim respon ke aku hehe terimakasih banget yaaaaa!!! btw aku mau kasih bonus ke ke kamu
-sekarang cobain ketik kata dibawah ini :
+sekarang cobain ketik kata dibawha ini ya :
 
-• jamet
-• lagi
-• ifusad
-• secret
-• secretvideo
+👉🏻 jamet
+👉🏻 cantik
+👉🏻 secret
+👉🏻 rexaaditya
+👉🏻 specialvideo
+
 Jangan Berekpetasi lebih ya wkwkwk 😊
 """)
 
@@ -385,30 +389,60 @@ Jangan Berekpetasi lebih ya wkwkwk 😊
 
 @app.on_message(filters.regex("jamet"))
 async def foto_se(_, message):
-    await app.send_photo(message.chat.id, "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg")
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg", caption="maaap yaaaa wkwkwk, kalo mau lagi ketik ** lagi ** ")
   
 
 @app.on_message(filters.regex("lagi"))
 async def regex_foto(_, message):
-    await app.send_photo(message.chat.id, "https://graph.org/file/46b2aa7693a28e510f5e0.jpg")
+    await app.send_photo(message.chat.id, "https://graph.org/file/46b2aa7693a28e510f5e0.jpg", "hehehe")
     
 
 # SEND IF U SAD
 
-@app.on_message(filters.regex("ifusad"))
+@app.on_message(filters.regex("rexaaditya"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
     await app.send_message(message.chat.id, """ 
-Jujur kalo aku lagi sedih kadang aku suka nonton Theater Jkt48 sih hehehe tapi coba kamu ketik urfavsong deh dengerin yakk semoga mood mu membaik 
+Asal Lo Tau Ya Dek !!! disini ga ada apa apa wkwkwk
+
+Susah kalo jadi orang penasaran 😜
+
+"""
+
+@app.on_message(filters.regex("secret"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """ 
+Disini aku mau ngasih tau, kalo kamu sedih coba deh ikutin cara ku
+itung beras sih biasanya klo aku.
+terus Jujur kalo aku lagi sedih kadang aku suka nonton Theater Jkt48 sih hehehe
+tapi coba kamu ketik urfavsong deh dengerin yakk semoga lekas membaik
 """)
 
 # REGEX SEND MEDIA
 
 @app.on_message(filters.regex("urfavsong"))
-async def regex_foto(_, message):
-    await app.send_voice(message.chat.id, "https://t.me/ifusadcallme/4", caption="semoga kamu suka")
-    
+async def regex_song(_, message):
+    await app.send_voice(message.chat.id, "https://t.me/ifusadcallme/4", caption="semoga kamu suka, kalo mau tau liriknya ketik aja ** lirik **")
+
+@app.on_message(filters.regex("cantik"))
+async def regex_cantik(_, message):
+    await app.send_video(message.chat.id, "https://t.me/ifusadcallme/6", caption="ini gemassssssss tapi kalo kamu ketik ** imut ** lebih gemas lagi")
+
+@app.on_message(filters.regex("lirik"))
+async def regex_lirik(_, message):
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/b592d5a3bf6fb4f66b955.jpg", caption="dengerin klo malem enak sih menurut ku")
+
+@app.on_message(filters.regex("imut"))
+async def regex_imut(_, message):
+    await app.send_video(message.chat.id, "https://t.me/ifusadcallme/5", caption="WKWKWKWKWK")
+
+@app.on_message(filters.regex("specialvideo"))
+async def regex_cantik(_, message):
+    await app.send_video(message.chat.id, "https://youtu.be/RtBz4l-ysOY", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
+
 
 print('loading cuy')
 print('•')
