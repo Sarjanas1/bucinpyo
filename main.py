@@ -134,7 +134,7 @@ async def kesatu(_, callback_query):
     query = callback_query.data.split()
     if query[0] == "kesatu":
         KESATU = """
-Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
+👋🏻 Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
 Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
 Selain Karna orderan Bot :)
 
@@ -143,8 +143,8 @@ Pencet Tombol Lanjut kalo seru
 """  
         KESATUTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KE MENU", callback_data="akukepo"),
-                InlineKeyboardButton("Hapus", callback_data="kesembilan"),
+                InlineKeyboardButton("HAPUS", callback_data="kesembilan"),
+                InlineKeyboardButton("Lanjut", callback_data="kedua"),
             ],
         ]
         await callback_query.edit_message_text(
@@ -153,12 +153,16 @@ Pencet Tombol Lanjut kalo seru
 
     if query[0] == "kedua":
         KEDUA = """
-TES 2
+‼️ Aku pengen bilang ini !!!
+Stop jadi orang ga enakan ! pelan pelan aja keluar dari zona nyaman kamu yang selalu di lakuin seenaknya!
+
+Kesel wei !! Ngeliat kamu digituin terus sama orang orang, kenapasih !! emang ga cape?
+ya jadi orang baik emang ga salah cuma jangan terus terusan kamu yang di jajah! Ngerti ga? Pokoknya kurang kurangin rasa ga enakannya ya !! 🙎‍♂️🙎‍♂️
 """ 
         KEDUATOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KE SATU", callback_data="kesatu"),
-                InlineKeyboardButton("LANJUT", callback_data="ketiga"),
+                InlineKeyboardButton("Balik ke 1", callback_data="kesatu"),
+                InlineKeyboardButton("Lanjut", callback_data="ketiga"),
                 ]
             ]
         await callback_query.edit_message_text(
@@ -167,12 +171,17 @@ TES 2
 
     if query[0] == "ketiga":
         KETIGA = """
-TES 3
+Siap siap !!!!!! 😡😡
+Saya mau ngomelin lagi !!!
+Jangan terlalu gampang diandelin tau ga! Ayah mu bener ngomong kek gitu, jangan batu napa sih!!
+udah stop terlalu care buat orang lain, Care nya kediri sendiri aja sih ah elahhhhhhhhhhhh!
+
+Kamu cantik kamu baik tapi jgn mau di perlakukan seenaknya sama orang! inget !!!
 """
         KETIGATOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KE DUA", callback_data="kedua"),
-                InlineKeyboardButton("LANJUT", callback_data="keempat"),
+                InlineKeyboardButton("Balik ke 2", callback_data="kedua"),
+                InlineKeyboardButton("Lanjut", callback_data="keempat"),
                 ]
             ]
         await callback_query.edit_message_text(
@@ -181,12 +190,16 @@ TES 3
 
     if query[0] =="keempat":
         KEEMPAT = """
-TES 4
+Dip inget ga ? Waktu pertama kali kamu kenal aku? Malahan sebelum kenal saya deh
+waktu di os LF dulu sebenarnya aku udah penasaran sama kamu, karena bio nya bekasi hehehe
+
+tapi karena saya anaknya pemalu dan sombong ( sombong karna saya bisa kalo gabisa saya ga sombong)
+jadi saya ga tertarik buat chat, tapi jujur aku anaknya ga berani ngechat, kalo suka ya suka aja diem diem hehehe
 """
         KEEMPATTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KETIGA", callback_data="ketiga"),
-                InlineKeyboardButton("LANJUT", callback_data="kelima"),
+                InlineKeyboardButton("Balik ke 3", callback_data="ketiga"),
+                InlineKeyboardButton("Lanjut", callback_data="kelima"),
                 ]
             ]
         await callback_query.edit_message_text(
@@ -195,12 +208,15 @@ TES 4
 
     if query[0] =="kelima":
         KELIMA = """
-TES 5
+Nah lama kelamaaan kok ngobrol sama kamu asik, Dulu tuh bikin Bot whatsapp sengaja biar kamu tau nomer wasap ku hehe
+dan akhirnya kamu kepancing kan buat diwasap sampe kita bikin group
+
+sebenarnya itu trik biar ak bisa deketik km wkwk maap yaaa tapi yaudahlah kan ga terlalu cringe juga usahanya
 """
         KELIMATOMBOL = [
            [
-               InlineKeyboardButton("KEMBALI KEEMPAT", callback_data="keempat"),
-               InlineKeyboardButton("LANJUT", callback_data="keenam"),
+               InlineKeyboardButton("Balik ke 4", callback_data="keempat"),
+               InlineKeyboardButton("Lanjut", callback_data="keenam"),
                ]
             ]
         await callback_query.edit_message_text(
@@ -209,12 +225,16 @@ TES 5
 
     if query[0] =="keenam":
         KEENAM = """
-TES 6
+lama kelamaan kita mulai ga kontekan tuh, sebenernya emang jarang sih, apalagi waktu ada problem sama sirkel kamu itu, tapi its okay, aku paham kamu lagi asik sama mereka
+dan tau ga? aku tu sebenernya kek ngerasa kehilangan, kek mikirnya gini "Duh keknya bakal gagal deh gua deketin si jean" gitu dalem hati
+dan setiap hari tuh selalu ngomong gini dalam hati "Gua bisa ga ya sama jean" "jean suka ga ya sama gua" heheh cringe tapi yaudahlah
+
+Karena gua lebih suka diem diem suka daripada langsung ngomong, gua juga orangnya ga asal, jadi harus pastiin dulu apa bener bener perasaan gua ada ga buat lu hehehe
 """
         KEENAMTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KELIMA", callback_data="kelima"),
-                InlineKeyboardButton("LANJUT", callback_data="ketujuh"),
+                InlineKeyboardButton("Balik ke 5", callback_data="kelima"),
+                InlineKeyboardButton("Lanjut", callback_data="ketujuh"),
                 ]
             ]
         await callback_query.edit_message_text(KEENAM, reply_markup=InlineKeyboardMarkup(KEENAMTOMBOL)
@@ -222,12 +242,17 @@ TES 6
 
     if query[0] =="ketujuh":
         KETUJUH = """
-TES 7
+Keknya aku harus jujur sama kamu, hehehe 
+
+Jadi intinya aku suka kamu, mungkin bisa dibilang nyaman, kalo sayang pasti karena kita temenan
+tapi ini rasanya beda dan kek pengen effort buat kamu, ngerti ga sih -,- !!
+
+pasti ngerti deh, kek setiap hari nyari tau tentang kamu gitu, dll, sebenrnya saya suka banget :)
 """
         KETUJUHTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KEENAM", callback_data="keenam"),
-                InlineKeyboardButton("LANJUT", callback_data="kedelapan"),
+                InlineKeyboardButton("Balik ke 6", callback_data="keenam"),
+                InlineKeyboardButton("Lanjut", callback_data="kedelapan"),
                 ]
             ]
         await callback_query.edit_message_text(KETUJUH, reply_markup=InlineKeyboardMarkup(KETUJUHTOMBOL)
@@ -235,24 +260,30 @@ TES 7
 
     if query[0] =="kedelapan":
         KEDELAPAN = """
-TES 8
+Ini cuma ungkapan ya, jadi aku ga nembak kamu, cuma ya mau anu, apasih namanya, kek ngungkapin aja yang perasaan yang sebenarnya,
+
+Saya ga pengen dibales kek apalah cuma mau confess aja sih ke kamu, yaaa maap ya caranya aga cringe lewat bot, hehe tapi aku anaknya emamg gini
+mau sesuatu yang beda, yang orang lain ga kepikiran, jadi ya bikin bot dari 0% sampe jadi gini, mu
+
+Ga bagus sih, cuma ya yang penting tersampaikan aja, Btw Mau nanya dong? Jujur aja Kamu Sebalikanya ga Ke saya? 
+Coba abis pencet tombol selesai, bales ya ketik Iya atau Gak aku tunggu 😜
 """
         KEDELAPANTOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KEDELAPAN", callback_data="ketujuh"),
-                InlineKeyboardButton("SELESAI", callback_data="kesembilan"),
+                InlineKeyboardButton("Balik ke 7", callback_data="ketujuh"),
+                InlineKeyboardButton("Selesai", callback_data="kesembilan"),
                 ]
             ]
         await callback_query.edit_message_text(KEDELAPAN, reply_markup=InlineKeyboardMarkup(KEDELAPANTOMBOL)
         )
 
-    if query[0] =="kesembilan":
-        KESEMBILAN = """
-TES 9
+    if query[0] =="selesai":
+        SELESAI = """
+Selesai
 """
-        KESEMBILANTOMBOL = [
+        SELESAITOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KEDELAPAN", callback_data="kedelapan"),
+                InlineKeyboardButton("Balik ke 8", callback_data="kedelapan"),
                 InlineKeyboardButton("SELESAI", callback_data="selesai"),
                 ]
             ]
