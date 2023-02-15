@@ -256,7 +256,7 @@ TES 9
                 InlineKeyboardButton("SELESAI", callback_data="selesai"),
                 ]
             ]
-        await callback_query.edit_message_text(KESEMBILAN, reply_markup=InlineKeyboardMarkup(KESEMBILANTOMBOL)
+        await callback_query.message.delete(KESEMBILAN)
         )
 
 @app.on_callback_query(filters.regex("^selesai"))
