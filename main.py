@@ -150,6 +150,7 @@ Pencet Tombol Lanjut kalo seru
         await callback_query.edit_message_text(
             KESATU, reply_markup=InlineKeyboardMarkup(KESATUTOMBOL)
         )
+
     if query[0] == "kedua":
         KEDUA = """
 TES 2
@@ -163,6 +164,7 @@ TES 2
         await callback_query.edit_message_text(
             KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
             )
+
     if query[0] == "ketiga"
         KETIGA = """
 TES 3
@@ -176,6 +178,7 @@ TES 3
         await callback_query.edit_message_text(
             KETIGA, reply_markup=InlineKeyboardMarkup(KETIGATOMBOL)
             )
+
     if query[0] =="keempat"
         KEEMPAT = """
 TES 4
