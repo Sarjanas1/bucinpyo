@@ -341,7 +341,7 @@ oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya 
 # SEND LUCAS
 
 @app.on_message(filters.regex("sesuatu"))
-async def foto_se(_, message):
+async def foto_se(_, message, Message):
     await app.send_photo(message.chat.id, "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg")
     if len(message.command) < 2:
         return await message.reply_text(
