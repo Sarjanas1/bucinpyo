@@ -144,8 +144,8 @@ TES 2
                 InlineKeyboardButton("LANJUT", callback_data="ketiga"),
                 ]
             ]
-            await callback_query.edit_message_text(
-                KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
+        await callback_query.edit_message_text(
+            KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
             )
 
 # REGEX SEND MEDIA
