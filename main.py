@@ -341,15 +341,15 @@ oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya 
 # SEND LUCAS
 
 @app.on_message(filters.regex("sesuatu"))
-async def regex_foto(_, message):
-    await app.send_photo(message.chat.id, "https://graph.org/file/6fd592fa2e0cc9ecc07f7.jpg")
+async def regex_foto(app, message):
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/c227b9057f0956b4839ba.jpg")
 
 @app.on_message(filters.regex("sesuatu"))
-async def chat_actions(_, message):
+async def tulisan(app, message):
     await app.send_message(message.chat.id, """ni foto jamet buat kamu heheheh kalo mau lagi ketik lucasbau """)
 
 @app.on_message(filters.regex("sesuatu"))
-async def regex_foto(_, message):
+async def tikel(app, message):
     await app.send_sticker(message.chat.id, "CAACAgQAAx0EZ77D7QAC4wFj7OY6ghLSIWyBaFjGdErmTXjFvwACoAsAAv3iYFGE3u_w4y_1zh4E")
 
 @app.on_message(filters.regex("lucasbau"))
