@@ -367,6 +367,7 @@ setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh,
 ini pokoknya harus :
 
 😡 kirim ke bot @rexaasisstantrobot kalo sudah ketik ** udah **
+ada kejutan lain lohh makanya isi dulu!!
 """)
 
 # UDAH 
