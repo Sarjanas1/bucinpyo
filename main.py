@@ -143,7 +143,7 @@ Pencet Tombol Lanjut kalo seru
 """  
         KESATUTOMBOL = [
             [
-                InlineKeyboardButton("HAPUS", callback_data="kesembilan"),
+                InlineKeyboardButton("HAPUS", callback_data="selesai"),
                 InlineKeyboardButton("Lanjut", callback_data="kedua"),
             ],
         ]
@@ -271,7 +271,7 @@ Coba abis pencet tombol selesai, bales ya ketik Iya atau Gak aku tunggu 😜
         KEDELAPANTOMBOL = [
             [
                 InlineKeyboardButton("Balik ke 7", callback_data="ketujuh"),
-                InlineKeyboardButton("Selesai", callback_data="kesembilan"),
+                InlineKeyboardButton("Selesai", callback_data="selesai"),
                 ]
             ]
         await callback_query.edit_message_text(KEDELAPAN, reply_markup=InlineKeyboardMarkup(KEDELAPANTOMBOL)
@@ -328,7 +328,7 @@ Sedih? kok bisa sih aelahh ga seru !!
 yang aku tau dipa itu anaknya periang dan susah sedih, 
 
 tapi gapapa kok kan ga harus bahagia, jujur aku ga bisa ngehibur, cuma kalo kamu mau cerita gapapa chat aku aja
-oh iya aku ada sesuatu buat kamu, coba deh ketik sesuatu""")
+oh iya sebenernya ada lagi sih wkwk, coba deh ketik mau""")
 
 @app.on_message(filters.regex("happy|hppy|seneng|bahagia|hapy"))
 async def chat_actions(_, message):
@@ -336,35 +336,78 @@ async def chat_actions(_, message):
     time.sleep(1)
     await app.send_message(message.chat.id, """
 Kamu lagi happy ? jangan bilang happy karena udah aku buatin bot hehehe, keknya gamungkin deh
-oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya ada lagi loh sebenernya wkwk, kalo mau liat aku mau ngasih apa coba kamu ketik mau """)
+oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya ada lagi loh sebenernya wkwk, coba kamu ketik mau """)
 
-# SEND LUCAS
 
-@app.on_message(filters.regex("sesuatu"))
+# MAU !!!!
+@app.on_message(filters.regex("mau|Mau"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """ 
+ini sebenernya gaterlalu penting sih, aku cuma pengen bilang semangat terus buat kamu 😊,
+
+don't be afraid of the future because Im sure u can pass it all ! Ganbatte neee!!
+Sebenernya project ini udah lama cuma dipending atau ke distract sama kesibukan hehehe
+aku juga bikin ini lumayan aga susah sih difirst time bikin bot sendiri ya gitu deh lumayan aga susah, tapi seru
+
+Apalagi ada tujuannya, ya siapa lagi kalo bukan kamu
+Makasih banget loh berkat kamu aku jadi banyak bgt bikin bot game, yang tadinya ketakutan keluar dari zona nyaman bot ku
+sserius dulu aku ga berani ke bot lain selain hikari, dan berkat kamu aku berhasil
+
+Aku harap kamu bisa kek aku, bukan jago bot tapi berhasil keluar dari Zona nyaman kamu yaaa
+everything will be fine, get rid of the fear in u, I'm here to show u something you've never seen before ♥️
+ILove you and Thankyou So much hehehe ♥️
+may you always be happy 😊
+
+setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh, ketik aja yaaa apa yang kamu mau sampein ke aku, abis itu kalo udah ketik udah
+""")
+
+# UDAH 
+@app.on_message(filters.regex("udah|udh"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """
+makasih yak udah ngirim respon ke aku hehe terimakasih banget yaaaaa!!! btw aku mau kasih bonus ke ke kamu
+sekarang cobain ketik kata dibawah ini :
+
+• jamet
+• lagi
+• ifusad
+• secret
+• secretvideo
+Jangan Berekpetasi lebih ya wkwkwk 😊
+""")
+
+
+# SEND JAMET
+
+@app.on_message(filters.regex("jamet"))
 async def foto_se(_, message):
     await app.send_photo(message.chat.id, "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg")
-    if len(message.regex) < 2:
-        return await message.reply_text(
-            "Kalo mau lagi coba ketik lucasbau"
-        )
-    query = message.text.split(None, 1)[1]
-@app.on_message(filters.regex("lucasbau"))
+  
+
+@app.on_message(filters.regex("lagi"))
 async def regex_foto(_, message):
     await app.send_photo(message.chat.id, "https://graph.org/file/46b2aa7693a28e510f5e0.jpg")
     
 
-# SEND VIDEO SEMANGAT
+# SEND IF U SAD
 
-
+@app.on_message(filters.regex("ifusad"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """ 
+Jujur kalo aku lagi sedih kadang aku suka nonton Theater Jkt48 sih hehehe tapi coba kamu ketik yourfavsong deh dengerin yakk semoga mood mu membaik 
+""")
 
 # REGEX SEND MEDIA
-@app.on_message(filters.regex("foto"))
-async def regex_foto(_, message):
-    await app.send_photo(message.chat.id, "https://graph.org/file/6fd592fa2e0cc9ecc07f7.jpg")
 
-@app.on_message(filters.regex("f"))
-async def regex_v(_, message):
-    await app.send_video(message.chat.id, "https://t.me/blamemelikeatrash/164")
+@app.on_message(filters.regex("ifusad"))
+async def regex_foto(_, message):
+    await app.send_voice(message.chat.id, "https://t.me/ifusadcallme/4", caption="semoga kamu suka")
     
 
 print('loading cuy')
