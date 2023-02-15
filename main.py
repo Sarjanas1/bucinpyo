@@ -163,7 +163,7 @@ TES 2
             ]
         await callback_query.edit_message_text(
             KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
-            )
+        )
 
     if query[0] == "ketiga"
         KETIGA = """
@@ -177,7 +177,7 @@ TES 3
             ]
         await callback_query.edit_message_text(
             KETIGA, reply_markup=InlineKeyboardMarkup(KETIGATOMBOL)
-            )
+        )
 
     if query[0] =="keempat"
         KEEMPAT = """
@@ -191,7 +191,7 @@ TES 4
             ]
         await callback_query.edit_message_text(
             KEEMPAT, reply_markup=InlineKeyboardMarkup(KEEMPATTOMBOL)
-            )
+        )
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
