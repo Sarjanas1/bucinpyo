@@ -197,7 +197,7 @@ TES 4
         KELIMA = """
 TES 5
 """
-       KELIMATOMBOL = [
+        KELIMATOMBOL = [
            [
                InlineKeyboardButton("KEMBALI KEEMPAT", callback_data="keempat"),
                InlineKeyboardButton("LANJUT", callback_data="keenam"),
