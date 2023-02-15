@@ -165,7 +165,7 @@ TES 2
             KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
         )
 
-    if query[0] == "ketiga"
+    if query[0] == "ketiga":
         KETIGA = """
 TES 3
 """
