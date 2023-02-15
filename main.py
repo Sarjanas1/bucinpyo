@@ -400,12 +400,12 @@ async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
     await app.send_message(message.chat.id, """ 
-Jujur kalo aku lagi sedih kadang aku suka nonton Theater Jkt48 sih hehehe tapi coba kamu ketik yourfavsong deh dengerin yakk semoga mood mu membaik 
+Jujur kalo aku lagi sedih kadang aku suka nonton Theater Jkt48 sih hehehe tapi coba kamu ketik urfavsong deh dengerin yakk semoga mood mu membaik 
 """)
 
 # REGEX SEND MEDIA
 
-@app.on_message(filters.regex("ifusad"))
+@app.on_message(filters.regex("urfavsong"))
 async def regex_foto(_, message):
     await app.send_voice(message.chat.id, "https://t.me/ifusadcallme/4", caption="semoga kamu suka")
     
