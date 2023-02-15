@@ -408,7 +408,7 @@ Asal Lo Tau Ya Dek !!! disini ga ada apa apa wkwkwk
 
 Susah kalo jadi orang penasaran 😜
 
-"""
+""")
 
 @app.on_message(filters.regex("secret"))
 async def chat_actions(_, message):
