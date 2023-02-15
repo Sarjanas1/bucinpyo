@@ -113,24 +113,10 @@ Sekarang kamu pencet -> /akukepo
 
 # CALLBACK TOMBOL YA INI !!
 
-AKUKEPO = "Cieeeee Kepo Bgt ya anda, heheh langsung aja klik tombol dibawah :)"
-
-AKUKEPOTOMBOL = [
-
-    [  
-        InlineKeyboardButton("KLIK DISINI", callback_data="kesatu"),              
-    ],            
-]            
-
-@app.on_message(filters.command("akukepo") & filters.private)
-async def akukepo(_, message):
-    await message.reply(
-        text = AKUKEPO,
-        reply_markup = InlineKeyboardMarkup(AKUKEPOTOMBOL)
-    )
-
-@app.on_callback_query(filters.regex("^kesatu"))
+@app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh"))
 async def kesatu(_, callback_query):
+query = callback_query.data.split()
+if query[0] == "kesatu":
     KESATU = """
 Pertama aku mau berterimakasih banget udah ngehargain Karya Bot saya dan
 Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua buka Chat Telegram
@@ -138,7 +124,6 @@ Selain Karna orderan Bot :)
 
 Intinya Terimakasih Banyak Untuk kamu
 Pencet Tombol Lanjut kalo seru
-
 """  
     KESATUTOMBOL = [
         [
@@ -148,7 +133,95 @@ Pencet Tombol Lanjut kalo seru
     ]
     await callback_query.edit_message_text(
         KESATU, reply_markup=InlineKeyboardMarkup(KESATUTOMBOL)
-    ) 
+    )
+
+if query[0] == "kedua":
+    KEDUA = """
+Cieeeeee Seru ya ? wkwkwk
+Anu Dip adalah salah satu orang baik yang gua temuin
+asik pasti! Dan lu orangnya selalu ikutin alur Lawan bicara kek gua persis
+apalagi ya sebenernya bingung sih mau ngomong apa, 
+kesatu jangan pernah mau di remehin terus sama orang.
+selalu ikutin apa yang orang mau? emang gak cape?
+baik ada batasnya ya
+"""
+    KEDUATOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE SATU", callback_data="kembali_ke_satu"),
+            InlineKeyboardButton("LANJUT", callback_data="ketiga"),
+            ],
+        ]
+        await callback_query.edit_message_text(
+            KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
+        )
+
+if query[0] =="ketiga":
+    KETIGA = """
+Nahh sperti yg udh rexa bilang sebelumnya ,ga boleh terus terusan mikir gitu ya!!!!
+sama anu jangan pernah berharap baik kita di balikin kan aku pernah bilang hidup itu bukan give and give kita gabisa maksa orang buat ngasih apa yang kita udah kasih okay?
+Semangat terus ya!!
+Rajinin sekolahnya Jangan malas !
+Kurangin begadangnya, Anak pertama itu sulit, sebenernya engga cuma ya nanti bakal ngerasain
+"""
+    KETIGATOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE DUA", callback_data="kembali_ke_dua"),
+            InlineKeyboardButton("LANJUT", callback_data="keempat"),
+            ]
+        ]
+        await callback_query.edit_message_text(KETIGA, reply_markup=InlineKeyboardMarkup(KETIGATOMBOL)
+        )
+
+if query[0] =="keempat":
+    KEEMPAT = """
+Jangan takut sama masa depan yaaaaa!!!
+Karena kalo kamu takut 
+"""
+    KEEMPATTOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE TIGA", callback_data="kembali_ke_tiga"),
+            InlineKeyboardButton("LANJUT", callback_data="kelima"),
+            ]
+        ]
+        await callback_query.edit_message_text(KEEMPAT, reply_markup=InlineKeyboardMarkup(KEEMPATTOMBOL)
+        )
+
+if query[0] =="kelima":
+    KELIMA = """
+PPPPPPP
+"""
+    KELIMATOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE EMPAT", callback_data="kembali_ke_empat"),
+            InlineKeyboardButton("LANJUT", callback_data="keenam"),
+            ]
+        ]
+        await callback_query.edit_message_text(KELIMA, reply_markup=InlineKeyboardMarkup(KELIMATOMBOL)
+        )
+if query[0] =="keenam":
+    KEENAM = """
+PPPPPPP
+"""
+    KEENAMTOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE LIMA", callback_data="kembali_ke_lima"),
+            InlineKeyboardButton("LANJUT", callback_data="ketujuh")
+            ]
+        ]
+        await callback_query.edit_message_text(KEENAM, reply_markup=InlineKeyboardMarkup(KEENAMTOMBOL)
+        )
+if query[0] =="ketujuh"
+    KETUJUH = """
+KETUJUH
+"""
+    KETUJUHTOMBOL = [
+        [
+            InlineKeyboardButton("KEMBALI KE ENAM", callback_data="kembali_ke_enam"),
+            InlineKeyboardButton("LANJUT", callback_data="kedelapan")
+            ]
+        ]
+        await callback_query.edit_message_text(KETUJUH, reply_markup=InlineKeyboardMarkup(KETUJUHTOMBOL)
+        )
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
