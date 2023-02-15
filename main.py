@@ -163,6 +163,32 @@ TES 2
         await callback_query.edit_message_text(
             KEDUA, reply_markup=InlineKeyboardMarkup(KEDUATOMBOL)
             )
+    if query[0] == "ketiga"
+        KETIGA = """
+TES 3
+"""
+        KETIGATOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KE DUA", callback_data="kedua"),
+                InlineKeyboardButton("LANJUT", callback_data="keempat"),
+                ]
+            ]
+        await callback_query.edit_message_text(
+            KETIGA, reply_markup=InlineKeyboardMarkup(KETIGATOMBOL)
+            )
+    if query[0] =="keempat"
+        KEEMPAT = """
+TES 4
+"""
+        KEEMPATTOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KETIGA", callback_data="ketiga"),
+                InlineKeyboardButton("LANJUT", callback_data="kelima"),
+                ]
+            ]
+        await callback_query.edit_message_text(
+            KEEMPAT, reply_markup=InlineKeyboardMarkup(KEEMPATTOMBOL)
+            )
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
