@@ -139,7 +139,7 @@ Terimakasih banget udah Mau Bantu udah jadi Temen cerita sampe Jadi alasan gua b
 Selain Karna orderan Bot :)
 
 Intinya Terimakasih Banyak Untuk kamu
-Pencet Tombol Lanjut kalo seru
+Pencet Tombol ** Lanjut ** kalo seru
 """  
         KESATUTOMBOL = [
             [
@@ -266,7 +266,11 @@ Saya ga pengen dibales kek apalah cuma mau confess aja sih ke kamu, yaaa maap ya
 mau sesuatu yang beda, yang orang lain ga kepikiran, jadi ya bikin bot dari 0% sampe jadi gini, mu
 
 Ga bagus sih, cuma ya yang penting tersampaikan aja, Btw Mau nanya dong? Jujur aja Kamu Sebalikanya ga Ke saya? 
-Coba abis pencet tombol selesai, bales ya ketik Iya atau Gak aku tunggu 😜
+Coba abis pencet tombol selesai
+
+Bales yaaa,
+ketik ** Iya ** atau ** Gak **
+aku tunggu 😜
 """
         KEDELAPANTOMBOL = [
             [
@@ -287,7 +291,7 @@ Selesai
                 InlineKeyboardButton("SELESAI", callback_data="selesai"),
                 ]
             ]
-        await callback_query.message.delete(KESEMBILAN)
+        await callback_query.message.delete(SELESAI)
 
 # GA ATAU IYA
 
@@ -441,7 +445,7 @@ async def regex_imut(_, message):
 
 @app.on_message(filters.regex("specialvideo"))
 async def regex_cantik(_, message):
-    await app.send_video(message.chat.id, "https://youtu.be/RtBz4l-ysOY", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
+    await app.send_video(message.chat.id, "https://t.me/ifusadcallme/7", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
 
 
 print('loading cuy')
