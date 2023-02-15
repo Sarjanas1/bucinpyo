@@ -240,7 +240,7 @@ TES 8
         KEDELAPANTOMBOL = [
             [
                 InlineKeyboardButton("KEMBALI KEDELAPAN", callback_data="ketujuh"),
-                InlineKeyboardButton("LANJUT", callback_data="kesembilan"),
+                InlineKeyboardButton("SELESAI", callback_data="kesembilan"),
                 ]
             ]
         await callback_query.edit_message_text(KEDELAPAN, reply_markup=InlineKeyboardMarkup(KEDELAPANTOMBOL)
@@ -257,13 +257,6 @@ TES 9
                 ]
             ]
         await callback_query.message.delete(KESEMBILAN)
-
-@app.on_callback_query(filters.regex("^selesai"))
-async def closekontol(_, callback_query):        
-    try:
-        await callback_query.message.delete()
-    except:
-        return
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
