@@ -350,10 +350,9 @@ PHOTO = "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg"
 async def lcas(_, message):
     text = LUCAS
     photo = PHOTO
-    await message.reply(
+    await message.reply_photo(
         text=text,
-        photo=photo,
-        disable_web_page_preview=True
+        photo=photo
     )
 
 @app.on_message(filters.regex("lucasbau"))
