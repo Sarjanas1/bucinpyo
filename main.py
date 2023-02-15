@@ -144,7 +144,7 @@ Pencet Tombol Lanjut kalo seru
         KESATUTOMBOL = [
             [
                 InlineKeyboardButton("KEMBALI KE MENU", callback_data="akukepo"),
-                InlineKeyboardButton("LANJUT", callback_data="kedua"),
+                InlineKeyboardButton("Hapus", callback_data="kesembilan"),
             ],
         ]
         await callback_query.edit_message_text(
@@ -157,7 +157,7 @@ TES 2
 """ 
         KEDUATOMBOL = [
             [
-                InlineKeyboardButton("KEMBALI KE SATU", callback_data="kembali_ke_satu"),
+                InlineKeyboardButton("KEMBALI KE SATU", callback_data="kesatu"),
                 InlineKeyboardButton("LANJUT", callback_data="ketiga"),
                 ]
             ]
