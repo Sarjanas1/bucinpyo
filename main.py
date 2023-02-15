@@ -346,8 +346,6 @@ async def regex_foto(_, message):
 
 @app.on_message(filters.regex("sesuatu"))
 async def chat_actions(_, message):
-    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
-    time.sleep(1)
     await app.send_message(message.chat.id, """ni foto jamet buat kamu heheheh kalo mau lagi ketik lucasbau """)
 
 @app.on_message(filters.regex("sesuatu"))
