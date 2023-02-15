@@ -340,17 +340,21 @@ oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya 
 
 # SEND LUCAS
 
-@app.on_message(filters.regex("sesuatu"))
-async def regex_foto(app, message):
-    await app.send_photo(message.chat.id, "https://telegra.ph/file/c227b9057f0956b4839ba.jpg")
+LUCAS = """ Ni ku kasih foto jamet hehehe wleee 😜
+Kalo kurang ketik aja lucasbau
+"""
 
-@app.on_message(filters.regex("sesuatu"))
-async def tulisan(app, message):
-    await app.send_message(message.chat.id, """ni foto jamet buat kamu heheheh kalo mau lagi ketik lucasbau """)
+PHOTO = "https://telegra.ph/file/f0246bd66f054ed2ac570.jpg"
 
-@app.on_message(filters.regex("sesuatu"))
-async def tikel(app, message):
-    await app.send_sticker(message.chat.id, "CAACAgQAAx0EZ77D7QAC4wFj7OY6ghLSIWyBaFjGdErmTXjFvwACoAsAAv3iYFGE3u_w4y_1zh4E")
+@app.on_message(filters.regex("sesuatu") & filters.private)
+async def lcas(_, message):
+    text = LUCAS
+    photo= PHOTO
+    await message.reply(
+        text=text,
+        photo=photo,
+        disable_web_page_preview=True
+    )
 
 @app.on_message(filters.regex("lucasbau"))
 async def regex_foto(_, message):
