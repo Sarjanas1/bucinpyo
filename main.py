@@ -289,6 +289,80 @@ Selesai
             ]
         await callback_query.message.delete(KESEMBILAN)
 
+# GA ATAU IYA
+
+@app.on_message(filters.regex("engga|G|enggak|gak|ga"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """
+gapapa kok santai saya mengerti, apalagi kamu punya trauma aku ngerti banget kok
+Teeimakasih yaaaaa udah jawab, tenang aja pesan ini ga diliat rexa kok, jadi kamu aman hehe
+
+Btw aku mau nanya are u sad or happy?
+bales ya !!""")
+
+@app.on_message(filters.regex("ya|iya|suka|y|yak|iyak"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """
+Serius banget nih kamu suka aku? wtf semalem gua mimpi apa ya anjg wkwkwk
+Terimakasih banget ya udah suka saya wkwkw, sebenernya aku gatau jawaban kamu sih ini kan bot wkwkwk tapi gapapa aku seneng aja hehe!
+oh iya aku mau nanya are u sad or happy?
+Bales ya!""")
+
+@app.on_message(filters.regex("ya|iya|suka|y|yak|iyak"))
+async def regex_foto(_, message):
+    await app.send_sticker(message.chat.id, "CAACAgUAAx0EZ77D7QAC4wpj7OcOfwWCQX2j_kH0Wk0oqgmKpgACJQUAAn3dOVa0npVTk7sv9R4E")
+
+
+# SAD & happy
+
+@app.on_message(filters.regex("sad|sedih|sedihh|sadd"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """
+Sedih? kok bisa sih aelahh ga seru !!
+yang aku tau dipa itu anaknya periang dan susah sedih, 
+
+tapi gapapa kok kan ga harus bahagia, jujur aku ga bisa ngehibur, cuma kalo kamu mau cerita gapapa chat aku aja
+oh iya aku ada sesuatu buat kamu, coba deh ketik sesuatu""")
+
+@app.on_message(filters.regex("happy|hppy|seneng|bahagia|hapy"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """
+Kamu lagi happy ? jangan bilang happy karena udah aku buatin bot hehehe, keknya gamungkin deh
+oh iya malah bagus kalo kamu lagi happy gini, semoga selalu happy yaaaa, oh iya ada lagi loh sebenernya wkwk, kalo mau liat aku mau ngasih apa coba kamu ketik mau """)
+
+# SEND LUCAS
+
+@app.on_message(filters.regex("sesuatu"))
+async def regex_foto(_, message):
+    await app.send_photo(message.chat.id, "https://graph.org/file/6fd592fa2e0cc9ecc07f7.jpg")
+
+@app.on_message(filters.regex("sesuatu"))
+async def chat_actions(_, message):
+    await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
+    time.sleep(1)
+    await app.send_message(message.chat.id, """ni foto jamet buat kamu heheheh kalo mau lagi ketik lucasbau """)
+
+@app.on_message(filters.regex("sesuatu"))
+async def regex_foto(_, message):
+    await app.send_sticker(message.chat.id, "CAACAgQAAx0EZ77D7QAC4wFj7OY6ghLSIWyBaFjGdErmTXjFvwACoAsAAv3iYFGE3u_w4y_1zh4E")
+
+@app.on_message(filters.regex("lucasbau"))
+async def regex_foto(_, message):
+    await app.send_photo(message.chat.id, "https://graph.org/file/46b2aa7693a28e510f5e0.jpg")
+    
+
+# SEND VIDEO SEMANGAT
+
+
+
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
 async def regex_foto(_, message):
