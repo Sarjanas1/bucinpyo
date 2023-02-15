@@ -130,6 +130,7 @@ async def akukepo(_, message):
     )
 
 @app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh"))
+async@app.on_callback_query(filters.regex("^kesatu|kedua|ketiga|keempat|kelima|keenam|ketujuh|kedelapan|kesembilan"))
 async def kesatu(_, callback_query):
     query = callback_query.data.split()
     if query[0] == "kesatu":
@@ -192,6 +193,79 @@ TES 4
         await callback_query.edit_message_text(
             KEEMPAT, reply_markup=InlineKeyboardMarkup(KEEMPATTOMBOL)
         )
+
+    if query[0] =="kelima":
+        KELIMA = """
+TES 5
+"""
+       KELIMATOMBOL = [
+           [
+               InlineKeyboardButton("KEMBALI KEEMPAT", callback_data="keempat"),
+               InlineKeyboardButton("LANJUT", callback_data="keenam"),
+               ]
+            ]
+        await callback_query.edit_message_text(
+            KELIMA, reply_markup=InlineKeyboardMarkup(KELIMATOMBOL)
+        )
+
+    if query[0] =="keenam":
+        KEENAM = """
+TES 6
+"""
+        KEENAMTOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KELIMA", callback_data="kelima"),
+                InlineKeyboardButton("LANJUT", callback_data="ketujuh"),
+                ]
+            ]
+        await callback_query.edit_message_text(KEENAM, reply_markup=InlineKeyboardMarkup(KEENAMTOMBOL)
+        )
+
+    if query[0] =="ketujuh":
+        KETUJUH = """
+TES 7
+"""
+        KETUJUHTOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KEENAM", callback_data="keenam"),
+                InlineKeyboardButton("LANJUT", callback_data="kedelapan"),
+                ]
+            ]
+        await callback_query.edit_message_text(KETUJUH, reply_markup=InlineKeyboardMarkup(KETUJUHTOMBOL)
+        )
+
+    if query[0] =="kedelapan":
+        KEDELAPAN = """
+TES 8
+"""
+        KEDELAPANTOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KEDELAPAN", callback_data="ketujuh"),
+                InlineKeyboardButton("LANJUT", callback_data="kesembilan"),
+                ]
+            ]
+        await callback_query.edit_message_text(KEDELAPAN, reply_markup=InlineKeyboardMarkup(KEDELAPANTOMBOL)
+        )
+
+    if query[0] =="kesembilan":
+        KESEMBILAN = """
+TES 9
+"""
+        KESEMBILANTOMBOL = [
+            [
+                InlineKeyboardButton("KEMBALI KEDELAPAN", callback_data="kedelapan"),
+                InlineKeyboardButton("SELESAI", callback_data="selesai"),
+                ]
+            ]
+        await callback_query.edit_message_text(KESEMBILAN, reply_markup=InlineKeyboardMarkup(KESEMBILANTOMBOL)
+        )
+
+@app.on_callback_query(filters.regex("^selesai"))
+async def closekontol(_, callback_query):        
+    try:
+        await callback_query.message.delete()
+    except:
+        return
 
 # REGEX SEND MEDIA
 @app.on_message(filters.regex("foto"))
