@@ -80,7 +80,7 @@ async def regex_indri(_, message):
     time.sleep(2)
     TEXT = """
 Nah ini nama yang bener hehehe !!!
-Halo indri 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
+Halo jopa 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
 Gimana ? kaget ga, ternyata kamu orangnya!!! keknya sih engga muhehe
 
 Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik penasaran :)
