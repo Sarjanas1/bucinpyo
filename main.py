@@ -27,7 +27,7 @@ app = pyrogram.Client(
 
 # COMMAND START AND HELP
 
-START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Bion anggap Special
+START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Agaz anggap Special
 Ketik mulai untuk memulai Bot ini :)
 
 ⚠️ Aturan pakai, jangan mengetik jika tidak disuruh mengetik!!
@@ -38,7 +38,7 @@ Ketik mulai untuk memulai Bot ini :)
 START_BUTTON = [
 
     [  
-        InlineKeyboardButton("Bion", url="https://t.me/onlybionn"),              
+        InlineKeyboardButton("me", url="https://t.me/milkfordrink"),              
     ],            
 ]            
 @app.on_message(filters.command("start") & filters.private)
@@ -59,13 +59,13 @@ async def chat_actions(_, message):
     await app.send_message(message.chat.id, "Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Bion tuju")
 
 # REGEX CARI NAMA
-@app.on_message(filters.regex("jopa|jopaa"))
+@app.on_message(filters.regex("alia|lia"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
     await app.send_message(message.chat.id, "benersih nama asli, cuma ga mau yang ini wleeeeeeeeee 😜")
 
-@app.on_message(filters.regex("jopa|acey|casey|cey"))
+@app.on_message(filters.regex("baby|ayang|cantikku|pacarku"))
 async def actions_chat(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
@@ -74,13 +74,13 @@ async def actions_chat(_, message):
 
 # ESEKUSI 1
 
-@app.on_message(filters.regex("aulia|yaya"))
+@app.on_message(filters.regex("jametku|alia jamet"))
 async def regex_indri(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
     TEXT = """
 Nah ini nama yang bener hehehe !!!
-Halo jopa 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
+Halo ayang 👋🏻 gimana hari ini? Asik tidak? saya harap sih asik selalu ya!!
 Gimana ? kaget ga, ternyata kamu orangnya!!! keknya sih engga muhehe
 
 Hummm Kamu penasaran Gak aku mau ngomong apa? Kalo penasaran coba deh Ketik penasaran :)
@@ -93,7 +93,7 @@ async def regexpena(_, message):
     time.sleep(2)
     TEXT = """
 Idih Kepo?? muhehehe becanda ya!!!
-Oke jadi di bot ini Aku (Bion) Cuma mau sampein sedikit banyak eh gmna ya -,-, Intinya gini
+Oke jadi di bot ini Aku (pacarkamu) Cuma mau sampein sedikit banyak eh gmna ya -,-, Intinya gini
 
 coba Kamu ketik intinya
 """
@@ -105,7 +105,7 @@ async def regexinti(_, message):
     time.sleep(2)
     TEXT = """
 aku cuma mau Berterima Kasih Karena udah kenal sama aku
-dan jadi pacar yang baik, sering cerita dll intinya terimakasih banyakk yakk!!!
+dan jadi pacar yang baik, sering cerita sama aku ya intinya terimakasih banyakk yakk!!!
 sebenernya ada lagi tapi aku gamau ngeliat kamu cape typing jadi kita main tombol aja yak !!
 
 Sekarang kamu pencet -> /akukepo
@@ -156,9 +156,9 @@ Pencet Tombol ** Lanjut ** kalo seru
     if query[0] == "kedua":
         KEDUA = """
 ‼️ Aku pengen bilang ini !!!
-Tetep jadi jopa yang aku kenal ya!
+Tetep jadi lia yang aku kenal ya!
 
-Kamu tau ga kenapa aku bilang "tetep jadi jopa yang aku kenal"?
+Kamu tau ga kenapa aku bilang "tetep jadi lia yang aku kenal"?
 Nih aku kasih tau kenapa ak bilang gitu, soalnya kalok kmu berubah aku yang nangis ehehehehe 
 """ 
         KEDUATOMBOL = [
@@ -175,10 +175,10 @@ Nih aku kasih tau kenapa ak bilang gitu, soalnya kalok kmu berubah aku yang nang
         KETIGA = """
 Siap siap !!!!!! 😡😡
 Saya mau ngomelin lagi !!!
-Jangan terlalu gampang dengerin omomgan orang yg ngejek in kamu tau!!
+Jangan pernah dengerin orang yg berkata jelek tentang kamu!!
 udah stop mikirin perkataan orang tentang apapun itu tentang kamu yaa!
 
-Kamu cantik kamu baik tapi jangan denger kata kata orang yg jelek jelekin kamu !!!
+POKOK NYA KAMU YANG TERBAIK DARI TERBAIK !!!
 """
         KETIGATOMBOL = [
             [
@@ -193,10 +193,10 @@ Kamu cantik kamu baik tapi jangan denger kata kata orang yg jelek jelekin kamu !
     if query[0] =="keempat":
         KEEMPAT = """
 bub inget ga ? Waktu pertama kali kamu kenal aku? Malahan sebelum kenal saya deh
-waktu di os wa dulu sebenarnya aku udah penasaran sama kamu, karena kamu lucu
+waktu call di tele kamu nangis karna di putusin wkwkw lucu deh
 
-tapi karena saya anaknya ga tau diri( ga tau diri maksudnya, padahal kamu dah punya pacar tetep ak chat)
-jadi saya mencoba berani ngechat anda, tapi jujur aku anaknya ga berani ngechat, kalo suka ya suka aja diem diem hehehe
+tapi karena saya anaknya pemalu,aku ga berani jujur bilang klok kmu lucu pas nangis
+jadi saya mencoba tetep stay cool padahal saya lagi nahan gemes
 """
         KEEMPATTOMBOL = [
             [
@@ -210,10 +210,10 @@ jadi saya mencoba berani ngechat anda, tapi jujur aku anaknya ga berani ngechat,
 
     if query[0] =="kelima":
         KELIMA = """
-Nah lama kelamaaan kok ngobrol sama kamu asik, Dulu yang aku ngajak os itu
-aku kira kamu ga bakal mau eh ternyata mau
+Nah lama kelamaan ak off tele tuh aku lupa add wa kamuu hmm sedih deh
+aku kira ga bakal bisa ketemu lagi mweheheh
 
-sebenarnya itu trik biar ak bisa deketin km wkwk maap yaaa tapi yaudahlah kan ga terlalu cringe juga usahanya
+eh ternyata kita ketemu lagi dan di situ aku seneng banget mwehehe ILY BUB ♡
 """
         KELIMATOMBOL = [
            [
@@ -227,11 +227,11 @@ sebenarnya itu trik biar ak bisa deketin km wkwk maap yaaa tapi yaudahlah kan ga
 
     if query[0] =="keenam":
         KEENAM = """
-Di suatu ketika aku cuek sama kamu karna ak pernah ngerasa ga di hargai
-dan tau ga? kamu tau ga aku ngearasa aku ga di hargai karna apa?
-pas kamu bilang galau pas kita lagi call rasanya kayak apa yaa eummm
+Di suatu ketik aku ga main tele lagi ak ngerasa ada rasa kangen dikit hwhe
+dan tau ga? kamu tau ga aku gimana ak nahan rasa kangennyaa
+pokok nya ga bisa di jelasin deh hahaha maaf ya itu rahasia aku
 
-Karena aku lebih baik marah nya cuek dari pada ngerespon kamu, maaf ya yang waktu itu
+POKOK NYA SEKARANG AKU SENENG BANGET JADI PACAR KAMU ♡
 """
         KEENAMTOMBOL = [
             [
@@ -249,7 +249,7 @@ Keknya aku harus jujur sama kamu, hehehe
 Jadi intinya aku sayang sama kamu, mungkin bisa dibilang nyaman, kalo sayang pasti karena ya sayang banget
 tapi ini rasanya beda dan kek pengen effort lebih buat kamu, ngerti ga sih -,- !!
 
-pasti ngerti deh, kek setiap hari nyari tau tentang kamu gitu, dll, sebenrnya saya suka banget :)
+pasti ngerti deh, kek setiap hari nyari tau tentang kamu gitu, dll, sebenernya saya suka banget :)
 """
         KETUJUHTOMBOL = [
             [
@@ -366,7 +366,7 @@ setelah ini kamu bisa kirim reaksi kamu setelah mainin bot ini ke aku loh,
 
 ini pokoknya harus :
 
-😡 kirim ke pc aja ke own bot ini @onlybionn kalo sudah ketik ** udah **
+😡 kirim ke pc aja ke own bot ini @milkfordrink kalo sudah ketik ** udah **
 ada kejutan lain lohh makanya isi dulu!!
 """)
 
@@ -382,7 +382,7 @@ sekarang cobain ketik kata dibawah ini ya :
 👉🏻 jamet
 👉🏻 cantik
 👉🏻 secret
-👉🏻 bionn
+👉🏻 agas
 👉🏻 specialvideo
 
 Jangan Berekpetasi lebih ya wkwkwk 😊
@@ -393,17 +393,17 @@ Jangan Berekpetasi lebih ya wkwkwk 😊
 
 @app.on_message(filters.regex("jamet"))
 async def foto_se(_, message):
-    await app.send_photo(message.chat.id, "https://telegra.ph/file/da27e3de339b8326c44b.jpg", caption="maaap yaaaa wkwkwk, kalo mau lagi ketik ** lagi ** ")
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/3f54136eb723a194c3f42.jpg", caption="maaap yaaaa wkwkwk, kalo mau lagi ketik ** lagi ** ")
   
 
 @app.on_message(filters.regex("lagi"))
 async def regex_foto(_, message):
-    await app.send_photo(message.chat.id, "https://telegra.ph/file/9b776c7644d2c53264edb.jpg", "hehehe")
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/0e2a4325e5709b51b32d7.jpg", "hehehe")
     
 
 # SEND IF U SAD
 
-@app.on_message(filters.regex("bionn"))
+@app.on_message(filters.regex("agas"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
@@ -429,23 +429,23 @@ tapi coba kamu ketik urfavsong deh dengerin yakk semoga lekas membaik
 
 @app.on_message(filters.regex("urfavsong"))
 async def regex_song(_, message):
-    await app.send_voice(message.chat.id, "https://t.me/jopajamet/3", caption="semoga kamu suka, kalo mau tau liriknya ketik aja ** lirik **")
+    await app.send_voice(message.chat.id, "https://t.me/yuiiahay/4944", caption="semoga kamu suka, kalo mau tau liriknya ketik aja ** lirik **")
 
 @app.on_message(filters.regex("cantik"))
 async def regex_cantik(_, message):
-    await app.send_video(message.chat.id, "https://t.me/jopajamet/4", caption="ini gemassssssss tapi kalo kamu ketik ** imut ** lebih gemas lagi")
+    await app.send_video(message.chat.id, "https://t.me/yheehehe/15", caption="ini gemassssssss tapi kalo kamu ketik ** imut ** lebih gemas lagi")
 
 @app.on_message(filters.regex("lirik"))
 async def regex_lirik(_, message):
-    await app.send_photo(message.chat.id, "https://telegra.ph/file/0f96e6e53f568496f84a5.jpg", caption="dengerin klo malem enak sih menurut ku")
+    await app.send_photo(message.chat.id, "https://telegra.ph/file/7283478652a7a82310216.jpg", caption="dengerin klo malem enak sih menurut ku")
 
 @app.on_message(filters.regex("imut"))
 async def regex_imut(_, message):
-    await app.send_photo(message.chat.id, "https://t.me/jopajamet/5", caption="WKWKWKWKWK")
+    await app.send_photo(message.chat.id, "https://t.me/yuiiahay/4951", caption="WKWKWKWKWK")
 
 @app.on_message(filters.regex("specialvideo"))
 async def regex_cantik(_, message):
-    await app.send_video(message.chat.id, "https://t.me/jopajamet/6", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
+    await app.send_video(message.chat.id, "https://t.me/yuiiahay/4950", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
 
 
 print('loading cuy')
