@@ -56,7 +56,7 @@ async def start(_, message):
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(2)
-    await app.send_message(message.chat.id, "Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang Bion tuju")
+    await app.send_message(message.chat.id, "Ketik nama kamu terlebih dahulu agar saya bisa cek apakah benar kamu orang yang agaz tuju")
 
 # REGEX CARI NAMA
 @app.on_message(filters.regex("alia|lia"))
@@ -178,7 +178,7 @@ Saya mau ngomelin lagi !!!
 Jangan pernah dengerin orang yg berkata jelek tentang kamu!!
 udah stop mikirin perkataan orang tentang apapun itu tentang kamu yaa!
 
-POKOK NYA KAMU YANG TERBAIK DARI TERBAIK !!!
+POKOK NYA KAMU YANG TERBAIK DARI APAPUN ITU !!!
 """
         KETIGATOMBOL = [
             [
@@ -349,7 +349,7 @@ async def chat_actions(_, message):
 ini sebenernya gaterlalu penting sih, aku cuma pengen bilang semangat terus buat kamu 😊,
 
 don't be afraid of the future because Im sure u can pass it all ! Ganbatte neee!!
-Sebenernya project ini udah lama cuma dipending atau ke distract sama kesibukan hehehe
+Sebenernya project ini udah lama pas awal kenal cuma dipending atau ke distract sama kesibukan hehehe
 aku juga bikin ini lumayan aga susah sih difirst time bikin bot sendiri ya gitu deh lumayan aga susah, tapi seru
 
 Apalagi ada tujuannya, ya siapa lagi kalo bukan kamu
@@ -382,7 +382,7 @@ sekarang cobain ketik kata dibawah ini ya :
 👉🏻 jamet
 👉🏻 cantik
 👉🏻 secret
-👉🏻 agas
+👉🏻 kepo
 👉🏻 specialvideo
 
 Jangan Berekpetasi lebih ya wkwkwk 😊
@@ -403,7 +403,7 @@ async def regex_foto(_, message):
 
 # SEND IF U SAD
 
-@app.on_message(filters.regex("agas"))
+@app.on_message(filters.regex("kepo"))
 async def chat_actions(_, message):
     await app.send_chat_action(message.chat.id, enums.ChatAction.TYPING)
     time.sleep(1)
@@ -445,7 +445,7 @@ async def regex_imut(_, message):
 
 @app.on_message(filters.regex("specialvideo"))
 async def regex_cantik(_, message):
-    await app.send_video(message.chat.id, "https://t.me/yuiiahay/4950", caption="ini lagu yang bikin gua semangat terus, menurut gua sih enak")
+    await app.send_video(message.chat.id, "https://t.me/yuiiahay/4950", caption="INI BUAT KAMU BUB")
 
 
 print('loading cuy')
