@@ -27,7 +27,7 @@ app = pyrogram.Client(
 
 # COMMAND START AND HELP
 
-START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang Agaz anggap Special
+START_MESSAGE = """ 👋🏻 Halo saya Adalah bot yang dibuat untuk orang yang gar anggap Special
 Ketik mulai untuk memulai Bot ini :)
 
 ⚠️ Aturan pakai, jangan mengetik jika tidak disuruh mengetik!!
