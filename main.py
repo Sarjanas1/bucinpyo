@@ -426,11 +426,11 @@ tapi coba kamu ketik urfavsong deh dengerin yakk semoga lekas membaik
 
 @app.on_message(filters.regex("urfavsong"))
 async def regex_song(_, message):
-    await app.send_voice(message.chat.id, "https://t.me/buatdiranih/3", caption="semoga kamu suka, kalo mau tau liriknya ketik aja ** lirik **")
+    await app.send_voice(message.chat.id, "https://t.me/buatdiranih/3", caption="semoga kamu suka")
 
 @app.on_message(filters.regex("cantik"))
 async def regex_cantik(_, message):
-    await app.send_video(message.chat.id, "https://t.me/buatdiranih/4", caption="ini gemassssssss tapi kalo kamu ketik ** imut ** lebih gemas lagi")
+    await app.send_photo(message.chat.id, "https://t.me/buatdiranih/4", caption="ini gemassssssss tapi kalo kamu ketik ** imut ** lebih gemas lagi")
 
 @app.on_message(filters.regex("cute"))
 async def regex_cute(_, message):
